@@ -1,0 +1,36 @@
+.mantmenyuone1 {
+    padding-bottom: 270px;
+    /* display: flex; */
+    background-color: #bbb;
+    max-width: 1560px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    /* margin-top: 30px; */
+    font-size: 70px;
+    color: #551a81;
+}
+
+button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    /* padding: 20px 40px; */
+    background-color: yellow;
+    border-radius: 20px;
+    border: 2px solid black;
+    color: #551a81;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: initial;
+
+}
+
+.enkrrjon {
+    padding: 20px 40px;
+}

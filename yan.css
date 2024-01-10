@@ -1,0 +1,30 @@
+.menu-news {
+    display: flex;
+    text-align: center;
+    border: 2px solid black;
+    justify-content: space-between;
+}
+
+.menu-news {
+    max-width: 1560px;
+    margin: auto;
+}
+
+.menu-text-news {
+    background-color: #bbb;
+    text-align: center;
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+.flexxs {
+    font-size: 15px ;
+    color: black;
+    /* margin-left: 50px; */
+    list-style-type: none;
+    padding: 20px;
+    max-width: 1560px;
+    background-color: #bbb;
+    margin: auto;
+}
+

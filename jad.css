@@ -1,0 +1,40 @@
+th,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    padding: 5px;
+}
+
+.boshla {
+    border: 2px solid gold;
+}
+
+.superdiv {
+    max-width: 1560px;
+    margin: auto;
+}
+
+table {
+    max-width: 1560px;
+    margin: auto;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.snf {
+    color: #551b81;
+} 
+

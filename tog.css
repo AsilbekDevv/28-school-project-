@@ -1,0 +1,88 @@
+.asmenyu .fanlar ul li {
+    /* padding: 100px; */
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+}
+
+.asmenyu {
+    display: flex;  
+}
+
+.fanlar {
+    background-color:#bbb;
+}
+ 
+a {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.elay:hover {
+    background-color: yellow;
+}
+
+.jonne {
+    color: #551a8b;
+}
+
+/* matematika */
+
+.kattamenuy .mal .rassm {
+    border: 2px solid black;
+}
+
+.mal {
+    display: flex;  
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.malu ul li {
+    font-size: 40px;
+}
+
+
+
+.memenu {
+    max-width: 1560px;
+    margin: auto;
+}
+
+.damal ul li {
+    font-size: 35px;
+    padding-top: 10px;
+}
+
+.togarakkk {
+    margin-top: 20px;
+}
+
+.damal {
+    font-size: 20px;
+}
+
+.damal {
+    border: 2px solid black;
+}
+
+.tel {
+    font-size: 50px;
+    margin-top: px;
+}
+
+.jongategdi {
+    font-size:larger;
+}
+
+.kattamenyu {
+    margin-left: 100px;
+}
+
+.jonne {
+    font-size: 37px;
+}

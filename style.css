@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container ul li {
+    list-style: none;
+    float: left;
+    padding: 20px;
+    padding-top: 20px;
+    /* padding-bottom: 10; */
+    text-decoration: none;
+}
+
+.wrap {
+    margin-left: 30px;
+}
+
+.flex {
+    font-size: 30px;
+    list-style-type: none;
+    padding-left: 30px;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    background-color: #bebebe;
+    max-width: 1560px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.flexx {
+    /* margin-top: 20px; */
+    list-style: none;
+    /* margin-left: 50px; */
+}
+
+
+/* slider qismi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    /* min-height: 100vh; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: #ede6d6;
+}
+
+.slide-container {
+    position: relative;
+    width: 800px;
+    height: 350px;
+    border: 3px solid #ede6d6;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.slide-container .slides {
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-container .slides img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.slide-container .slides img:not(.active) {
+    top: 0;
+    left: -100%;
+}
+
+span.next,
+span.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+span.next {
+    right: 20px;
+}
+
+span.prev {
+    left: 20px;
+}
+
+span.next:hover,
+span.prev:hover {
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+}
+
+.dotsContainer {
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dotsContainer .dot {
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.dotsContainer .active {
+    background-color: #555;
+}
+
+@keyframes next1 {
+    from {
+        left: 0%
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes prev1 {
+    from {
+        left: 0%
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes prev2 {
+    from {
+        left: -100%
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+/* slayd tugadi! */
+
+.kattadiv {
+    display: flex;
+    max-width: 1560px;
+}
+
+.text {
+    background-color: #9b9b9b;
+    text-align: center;
+    padding-top: 20px;
+    background-size: cover;
+    width: 800px;
+    /* margin-left: 150px; */
+}
+
+.p {
+    /* width:; */
+    height: 1px;
+    margin-top: 50px; 
+    text-align: center;
+}
+
+.text a {
+    font-size: 20px;
+}
+
+.jadval {
+    background-image: url(./dsvdms.png);
+    padding: 50px;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.strelka {
+    font-size: 80px;
+    margin: auto;
+    max-width: 1560px;
+    font-weight: 900;
+    color: yellow;
+}
+
+span {
+    color: yellow;
+}
+
+.togaraklar {
+    display: flex;
+    justify-content: space-around;
+    /* gap: 930px; */
+    background-color: #bbb;
+    color: #fff;
+}
+
+.kop {
+    margin-top: 30px;
+
+}
+
+.rang {
+    color: #fff;
+}
+
+.o {
+    color: #333;
+}
+
+.a {
+    color: #333;
+}
+
+.b {
+    color: #333;
+}
+
+.c {
+    color: Yellow;
+}
+
+.megakattadiv {
+    max-width: 1560px;
+    margin: auto;
+}
+
+.ponep {
+    padding: 20px 30px;
+    text-align: center;
+    background-color: antiquewhite;
+    color: #333;
+    font-weight: 600;
+    /* margin-top: 130px; */
+    margin: auto;
+    max-width: 1560px;
+}
+
+h1 {
+    margin-right: 50px;
+}
+
+.megasupergigandkattadiv {
+    min-width: 1560px;
+}
+
+.helo {
+    text-align: center;
+    background-color: #bbb;
+    color: yellow;
+    max-width: 1560px;
+    margin: auto;
+}
+
+ul li {
+    font-size: 25px;
+}
+
+.keraksiz {
+    margin-left: 200px;
+    text-align: center;
+}
+
+.nuqta {
+    margin-left: 800px;
+}
+
+.kattadiv {
+    margin: auto;
+    max-width: 1560px;
+}
+
+.kerakli {
+    margin: auto;
+    max-width: 1560px;
+}
+
+ul li {
+    font-size: 20px;
+}
+
+.jonne {
+    font-size: 20px;
+}
+
+ul li {
+    color: #551a81;
+}
+
+.bir-kattamenuy {
+    display: flex;
+}
+
+th {
+    text-align: center;
+}

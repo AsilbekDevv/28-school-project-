@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>28-Maktab - Bosh Sahifa</title>
+    <link rel="icon" href="./28-Maktab.png">
+    <link rel="stylesheet" href="jad.css">
+    <link rel="stylesheet" href="mat.css">
+    <link rel="stylesheet" href="tog.css">
+    <link rel="stylesheet" href="yan.css">
+    <link rel="stylesheet" href="11jad.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="div">
+            <a href="index.html">
+                <li class="flex">28-Maktab</li>
+            </a>
+        </div>
+        <ul>
+            <a href="index.html">
+                <li class="wrap">Bosh Safiha</li>
+            </a>
+            <a href="yan.html">
+                <li>Yangiliklar</li>
+            </a>
+            <a href="tog.html">
+                <li>To'garaklar</li>
+            </a>
+            <a href="jad.html">
+                <li>Jadval</li>
+            </a>
+            <a href="tad.html">
+                <li>Tadbirlar</li>
+            </a>
+            <a href="bog.html">
+                <li class="flexx">Bog'lanish</li>
+            </a>
+        </ul>
+
+    </div>
+
+    <!-- slayd qismi ! -->
+    <div class="kattadiv">
+        <div class="slide-container">
+
+            <div class="slides">
+                <img src="./Konstitiutsiya bayrami. 8mp4.jpg" class="active">
+                <img src="./Konstitutsiya 3.jpg">
+                <img src="./Konstitutsiya faxrimiz1.jpg">
+                <img src="./Konstitutsiya dektant 6jpg.jpg">
+                <img src="./Konstitutsiya dektant 1.jpg">
+            </div>
+
+            <div class="buttons">
+                <span class="next">&#10095;</span>
+                <span class="prev">&#10094;</span>
+            </div>
+
+            <div class="dotsContainer">
+                <div class="dot active" attr='0' onclick="switchImage(this)"></div>
+                <div class="dot" attr='1' onclick="switchImage(this)"></div>
+                <div class="dot" attr='2' onclick="switchImage(this)"></div>
+                <div class="dot" attr='3' onclick="switchImage(this)"></div>
+                <div class="dot" attr='4' onclick="switchImage(this)"></div>
+            </div>
+
+        </div>
+
+        <div class="text">
+            <h1>Konstitutsiya 31 yoshda!</h1>
+            <p class="p">
+                28-Maktabdagi barcha sinflar Konstitutsiya haqida tadbirlar qilish va u haqida diktant yozishayabdi.
+            </p><br><br><br><br><br><br><br>
+            <a href="yan.html">Ba'tafsil!</a>
+        </div>
+    </div>
+
+    <div class="kerakli">
+        <div class="jadval">
+            <h1 class="uwu">Barcha sinflar jadvali <br> <span>bu yerda !</span> </h1> <a href="jad.html">
+                <h1 class="strelka">→</h1>
+            </a>
+        </div>
+        <h1 class="helo">28-Maktabdagi mavjud To'garaklar</h1>
+        <div class="togaraklar">
+            <div class="div">
+                <a class="rang o " href="tog-mat.html">
+                    <h1>Matematika</h1>
+                </a>
+                <a class="rang a" href="tog-ona-ada.html">
+                    <h1>Ona-Tili</h1>
+                </a>
+                <a class="rang b" href="tog-ona-ada.html">
+                    <h1>Adabiyot</h1>
+                </a>
+            </div>
+            <div class="koppala">
+                <a class="rang c" href="tog.html">
+                    <h1 class="kop ">Ko'proq→</h1>
+                </a>
+            </div>
+        </div>
+        <p class="ponep">28-Maktab &copy; 2023, All Rights Reserved</p>
+    </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        // Access the Images
+        let slideImages = document.querySelectorAll('img');
+        // Access the next and prev buttons
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        // Access the indicators
+        let dots = document.querySelectorAll('.dot');
+
+        var counter = 0;
+
+        // Code for next button
+        next.addEventListener('click', slideNext);
+        function slideNext() {
+            slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+            if (counter >= slideImages.length - 1) {
+                counter = 0;
+            }
+            else {
+                counter++;
+            }
+            slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+            indicators();
+        }
+
+        // Code for prev button
+        prev.addEventListener('click', slidePrev);
+        function slidePrev() {
+            slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+            if (counter == 0) {
+                counter = slideImages.length - 1;
+            }
+            else {
+                counter--;
+            }
+            slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+            indicators();
+        }
+
+        // Auto slideing
+        function autoSliding() {
+            deletInterval = setInterval(timer, 3000);
+            function timer() {
+                slideNext();
+                indicators();
+            }
+        }
+        autoSliding();
+
+        // Stop auto sliding when mouse is over
+        const container = document.querySelector('.slide-container');
+        container.addEventListener('mouseover', function () {
+            clearInterval(deletInterval);
+        });
+
+        // Resume sliding when mouse is out
+        container.addEventListener('mouseout', autoSliding);
+
+        // Add and remove active class from the indicators
+        function indicators() {
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(' active', '');
+            }
+            dots[counter].className += ' active';
+        }
+
+        // Add click event to the indicator
+        function switchImage(currentImage) {
+            currentImage.classList.add('active');
+            var imageId = currentImage.getAttribute('attr');
+            if (imageId > counter) {
+                slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+                counter = imageId;
+                slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+            }
+            else if (imageId == counter) {
+                return;
+            }
+            else {
+                slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+                counter = imageId;
+                slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+            }
+            indicators();
+        }
+
+    </script>
+
+</body>
+
+</html>
